@@ -25,4 +25,4 @@ Only Me
 
 # Deployed Link
 
-https://jr1994-ca.github.io/Weather-Dashboard/
+https://jr1994-ca.github.io/WeatherDashboard/
