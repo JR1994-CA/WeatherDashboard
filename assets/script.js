@@ -1,5 +1,3 @@
-const config = require('config.js');
-
 var city="";
 
 var searchCity = $("#search-city");
@@ -33,7 +31,7 @@ function displayWeather(event){
 
 function currentWeather(city){
     
-    var queryURL= "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&APPID=" + config;
+    var queryURL= "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&APPID=" + APIKey;
     $.ajax({
         url:queryURL,
         method:"GET",
@@ -85,7 +83,7 @@ function currentWeather(city){
 
 function UVIndex(ln,lt){
 
-    var uvqURL="https://api.openweathermap.org/data/2.5/uvi?appid="+ config +"&lat="+lt+"&lon="+ln;
+    var uvqURL="https://api.openweathermap.org/data/2.5/uvi?appid="+ APIKey +"&lat="+lt+"&lon="+ln;
     $.ajax({
             url:uvqURL,
             method:"GET"
@@ -97,7 +95,7 @@ function UVIndex(ln,lt){
 
 function forecast(cityid){
     var dayover= false;
-    var queryforcastURL="https://api.openweathermap.org/data/2.5/forecast?id="+cityid+"&appid="+config;
+    var queryforcastURL="https://api.openweathermap.org/data/2.5/forecast?id="+cityid+"&appid="+ APIKey;
     $.ajax({
         url:queryforcastURL,
         method:"GET"
